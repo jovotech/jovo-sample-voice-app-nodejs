@@ -14,7 +14,7 @@ webhook.listen(3000, function() {
 });
 
 webhook.post('/webhook', function(req, res) {
-    app.init(req, res, handlers);
+    app.handleRequest(req, res, handlers);
     app.execute();
 });
 
@@ -27,7 +27,7 @@ webhook.post('/webhook', function(req, res) {
 let handlers = {
 
     'LAUNCH': function() {
-        app.goTo('HelloWorldIntent');
+        app.toIntent('HelloWorldIntent');
     },
 
     'HelloWorldIntent': function() {

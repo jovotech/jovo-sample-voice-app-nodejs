@@ -8,7 +8,7 @@
 const app = require('jovo-framework').Jovo;
 
 exports.handler = function(event, context, callback) {
-    app.init(event, callback, handlers);
+    app.handleRequest(event, callback, handlers);
     app.execute();
 };
 
@@ -21,7 +21,7 @@ exports.handler = function(event, context, callback) {
 let handlers = {
 
     'LAUNCH': function() {
-        app.goTo('HelloWorldIntent');
+        app.toIntent('HelloWorldIntent');
     },
 
     'HelloWorldIntent': function() {
