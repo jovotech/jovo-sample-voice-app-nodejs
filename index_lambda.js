@@ -26,5 +26,5 @@ let handlers = {
 
     'HelloWorldIntent': function() {
         app.tell('Hello World!');
-    }
+    },
 };
