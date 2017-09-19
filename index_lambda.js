@@ -1,8 +1,7 @@
 'use strict';
 
 // =================================================================================
-// The below code is used to set up a server and a webhook at /webhook.
-// Danger Zone: Editing might break your app.
+// The below code is used to set up the AWS Lambda handler
 // =================================================================================
 
 const app = require('jovo-framework').Jovo;
