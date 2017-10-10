@@ -1,8 +1,7 @@
 'use strict';
 
 // =================================================================================
-// The below code is used to set up a server and a webhook at /webhook.
-// Danger Zone: Editing might break your app.
+// App Configuration
 // =================================================================================
 
 const app = require('jovo-framework').Jovo;
@@ -20,11 +19,10 @@ webhook.post('/webhook', function(req, res) {
 
 
 // =================================================================================
-// Below is where the logic of your voice app should be happening
-// Get started by adding some intents and Jovo functions
+// App Logic
 // =================================================================================
 
-let handlers = {
+const handlers = {
 
     'LAUNCH': function() {
         app.toIntent('HelloWorldIntent');

@@ -1,7 +1,7 @@
 'use strict';
 
 // =================================================================================
-// The below code is used to set up the AWS Lambda handler
+// App Configuration
 // =================================================================================
 
 const app = require('jovo-framework').Jovo;
@@ -13,11 +13,10 @@ exports.handler = function(event, context, callback) {
 
 
 // =================================================================================
-// Below is where the logic of your voice app should be happening
-// Get started by adding some intents and Jovo functions
+// App Logic
 // =================================================================================
 
-let handlers = {
+const handlers = {
 
     'LAUNCH': function() {
         app.toIntent('HelloWorldIntent');
