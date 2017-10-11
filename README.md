@@ -192,7 +192,7 @@ Activate test status in the Simulator. Make sure to use the right invocation (th
 ## What else can I do with Jovo?
 
 Jovo is still in early beta, so we're still improving and appreciate any feedback!
-You can find a reference to all Jovo functions [here](https://docs.google.com/document/d/1SN_M-kS76Yz6B5pfMFrlYtM-ly2l10aZce3ULrZJztw/edit?usp=sharing "Jovo Docs").
+You can find a reference to all Jovo functions [here](https://www.jovo.tech/framework/docs/).
 
 ## We need your help
 Jovo is a free, open source framework for voice developers. We're improving it every day and appreciate any feedback. How to support us? Just go ahead and build something cool with the framework and let us know at feedback@jovo.tech. Thanks!
