@@ -17,12 +17,8 @@
 ## Table of Contents
 
 * [Getting Started](#getting-started)
-  * [Jovo CLI](#jovo-cli)
-  * [Jovo Framework](#jovo-framework)
-  * [Jovo Sample App](#jovo-sample-app)
 * [Tutorials](#tutorials)
-* [Development Roadmap](#development-roadmap)
-
+* [How to Contribute](#how-to-contribute)
 
 
 ## Getting Started
@@ -208,10 +204,15 @@ Activate test status in the Simulator. Make sure to use the right invocation (th
 ![Using the Simulator to test your Google Action](https://www.jovo.tech/img/get-started/google-test.jpg "Jovo Test with Google Assistant")
 
 
-## What else can I do with Jovo?
+## Tutorials
 
-Jovo is still in early beta, so we're still improving and appreciate any feedback!
-You can find a reference to all Jovo functions [here](https://www.jovo.tech/framework/docs/).
+Find a quickstart guide and comprehensive tutorials here:
 
-## We need your help
+* [Build a cross-platform voice app in 5 simple steps](https://www.jovo.tech/get-started)
+* [Build an Alexa Skill with Jovo](https://www.jovo.tech/blog/alexa-skill-tutorial-nodejs/)
+* [Build a Google Action with Jovo](https://www.jovo.tech/blog/google-action-tutorial-nodejs/)
+
+
+
+## How to Contribute
 Jovo is a free, open source framework for voice developers. We're improving it every day and appreciate any feedback. How to support us? Just go ahead and build something cool with the framework and let us know at feedback@jovo.tech. Thanks!
