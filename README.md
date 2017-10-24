@@ -7,7 +7,7 @@
 <a href="https://github.com/jovotech/jovo-cli"><strong>CLI</strong></a> -
 <a href="https://www.jovo.tech/framework/docs/"><strong>Documentation</strong></a> -
 <a href="https://www.jovo.tech/learn/"><strong>Courses</strong></a> - 
-<a href="https://github.com/jovotech/jovo-framework-nodejs/CONTRIBUTING.md"><strong>Contributing</strong></a> - <a href="https://twitter.com/jovotech"><strong>Twitter</strong></a></p>
+<a href="https://github.com/jovotech/jovo-framework-nodejs/blob/master/CONTRIBUTING.md"><strong>Contributing</strong></a> - <a href="https://twitter.com/jovotech"><strong>Twitter</strong></a></p>
 <br/>
 
 [Jovo](https://www.jovo.tech "Jovo's website") is a development framework for cross-platform voice apps. Use this repository as a starting point to create a voice application for Amazon Alexa and Google Assistant.
