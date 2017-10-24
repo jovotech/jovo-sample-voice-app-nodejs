@@ -1,8 +1,27 @@
+[![Jovo Framework](https://www.jovo.tech/downloads/jovo-header.png)](https://www.jovo.tech)
+
 # Sample Voice App for Jovo
 
-[Jovo](https://www.jovo.tech "Jovo's website") is a framework for voice developers to create cross-platform apps. Use this repository as a starting point to create a voice application for Amazon Alexa and Google Home.
+<p>
+<a href="https://github.com/jovotech/jovo-framework-nodejs/"><strong>Framework Repository</strong></a> -
+<a href="https://github.com/jovotech/jovo-cli"><strong>CLI</strong></a> -
+<a href="https://www.jovo.tech/framework/docs/"><strong>Documentation</strong></a> -
+<a href="https://www.jovo.tech/learn/"><strong>Courses</strong></a> - 
+<a href="https://github.com/jovotech/jovo-framework-nodejs/CONTRIBUTING.md"><strong>Contributing</strong></a> - <a href="https://twitter.com/jovotech"><strong>Twitter</strong></a></p>
+<br/>
 
-You can find an early version of the documentation [here](https://docs.google.com/document/d/1SN_M-kS76Yz6B5pfMFrlYtM-ly2l10aZce3ULrZJztw/edit?usp=sharing "Jovo Docs"). You can also use the ["Get Started"](https://www.jovo.tech/get-started "Jovo Framework Quickstart Guide") guide on jovo.tech.
+[Jovo](https://www.jovo.tech "Jovo's website") is a development framework for cross-platform voice apps. Use this repository as a starting point to create a voice application for Amazon Alexa and Google Assistant.
+
+> 🚀 Join our newsletter for free courses on voice app development: www.jovo.tech/newsletter 
+
+## Table of Contents
+
+* [Getting Started](#getting-started)
+  * [Jovo CLI](#jovo-cli)
+  * [Jovo Framework](#jovo-framework)
+  * [Jovo Sample App](#jovo-sample-app)
+* [Tutorials](#tutorials)
+* [Development Roadmap](#development-roadmap)
 
 
 
