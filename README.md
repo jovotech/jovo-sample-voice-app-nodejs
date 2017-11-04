@@ -66,7 +66,7 @@ If you're using the webhook version (index.js), you can run a local development 
 ```sh
 $ node index.js
 
-// It should return this:
+# It should return this:
 Local development server listening on port 3000.
 ```
 
@@ -74,11 +74,11 @@ Local development server listening on port 3000.
 
 The problem with running your code locally is that it is not accessible from the outside. This is where [ngrok](https://www.ngrok.com) comes into play. It's a tunneling service that points to your localhost to create an accessible web service. If you don't have ngrok yet, you can install it globally via npm:
 
-```
-// Open a new tab in your command line tool, then:
+```sh
+# Open a new tab in your command line tool, then:
 $ npm install ngrok -g
 
-// Point ngrok to your localhost:3000
+# Point ngrok to your localhost:3000
 $ ngrok http 3000
 ```
 
