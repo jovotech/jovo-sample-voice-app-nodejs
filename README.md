@@ -29,20 +29,20 @@ In this guide, you will learn how to create a "Hello World" voice app for both A
 
 Clone this repository to your coding environment:
 
-```
+```sh
 $ git clone https://github.com/jovotech/jovo-sample-voice-app-nodejs.git
 ```
 
 This repository includes
 * index.js, a "Hello World" template for local development
 * index_lambda.js, a "Hello World" template for AWS Lambda
-* /assets, a folder with files to easily configure your projects on Amazon and API.AI
+* /assets, a folder with files to easily configure your projects on Amazon and Dialogflow
 * package.json, including dependencies for the jovo-framework package
 
 
 Use node package manager to install the dependencies ([jovo-framework](https://www.npmjs.com/package/jovo-framework "Jovo NPM Package")):
 
-```
+```sh
 $ npm install
 ```
 
@@ -63,7 +63,7 @@ For local development and debugging, we recommend using a webhook and a tunnel s
 
 If you're using the webhook version (index.js), you can run a local development server with the following command: 
 
-```
+```sh
 $ node index.js
 
 // It should return this:
@@ -107,7 +107,7 @@ Use "Custom Interaction Model" and choose a name and invocation name of your cho
 You can either manually create a custom intent called HelloWorldIntent with 2 utterances "say hello" or "say hi," or copy and paste the examples from below. We recommend the new Skill Builder (in beta), but feel free to use the old editor if you want to.
 
 ##### Skill Builder Beta: Code Editor
-```
+```json
 {
   "intents": [
     {
@@ -136,7 +136,7 @@ You can either manually create a custom intent called HelloWorldIntent with 2 ut
 
 ##### Old Editor: Intent Schema
 
-```
+```json
 {
   "intents": [
     { "intent": "HelloWorldIntent" },
@@ -177,13 +177,13 @@ Here are other tools that can be used to test your skill: [Reverb](https://rever
 
 
 ### Step 5: "Hello World" on Google Home
-There are several possibilities to set up an Action for Google Home/Google Assistant. We recommend using API.AI for the first simple steps. 
+There are several possibilities to set up an Action for Google Home/Google Assistant. We recommend using Dialogflow for the first simple steps. 
 
-If it's your first time to set up a project for Google Assistant, [here's a tutorial](https://developers.google.com/actions/apiai/tutorials/getting-started),
+If it's your first time to set up a project for Google Assistant, [here's a tutorial](https://developers.google.com/actions/dialogflow/),
 
-#### Import Agent in API.AI
+#### Import Agent in Dialogflow
 
-Create a new agent on API.AI with any name and description you want.
+Create a new agent on Dialogflow with any name and description you want.
 
 Now, go to the preferences section (gear wheel next to the name) and select "Export and Import." There, you can import the sample agent provided in the /assets folder. Or you can [download it here](https://github.com/jovotech/jovo-sample-voice-app-nodejs/blob/master/assets/APIAI_JovoSampleVoiceApp.zip).
 
