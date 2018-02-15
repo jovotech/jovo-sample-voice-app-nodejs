@@ -4,25 +4,31 @@
 // App Configuration
 // =================================================================================
 
-const app = require('jovo-framework').Jovo;
+const {App} = require('jovo-framework');
 
-exports.handler = function(event, context, callback) {
-    app.handleRequest(event, callback, handlers);
-    app.execute();
+const config = {
+    logging: true,
 };
+
+const app = new App(config);
 
 
 // =================================================================================
 // App Logic
 // =================================================================================
 
-const handlers = {
-
+app.setHandler({
     'LAUNCH': function() {
-        app.toIntent('HelloWorldIntent');
+        this.toIntent('HelloWorldIntent');
     },
 
     'HelloWorldIntent': function() {
-        app.tell('Hello World!');
+        this.ask('Hello World! What\'s your name?', 'Please tell me your name.');
     },
-};
+
+    'MyNameIsIntent': function(name) {
+        this.tell('Hey ' + name.value + ', nice to meet you!');
+    },
+});
+
+module.exports.app = app;
