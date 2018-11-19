@@ -1,7 +1,7 @@
 'use strict';
 
-import {Webhook, ExpressJS, Lambda} from 'jovo-framework';
-import {app} from './app/app.js';
+import { Webhook, ExpressJS, Lambda } from 'jovo-framework';
+import { app } from './app/app.js';
 
 // ------------------------------------------------------------------
 // HOST CONFIGURATION
