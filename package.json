@@ -9,7 +9,8 @@
     "jovo-platform-googleassistant": "^2.0.0"
   },
   "devDependencies": {
-    "jovo-plugin-debugger": "^2.0.0"
+    "jovo-plugin-debugger": "^2.0.0",
+    "jovo-db-filedb": "^2.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
