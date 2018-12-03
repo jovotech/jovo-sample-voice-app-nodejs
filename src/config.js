@@ -8,4 +8,10 @@ module.exports = {
    intentMap: {
       'AMAZON.StopIntent': 'END',
    },
+
+   db: {
+        FileDb: {
+            pathToFile: '../db/db.json',
+        }
+    },
 };
