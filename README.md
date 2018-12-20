@@ -11,16 +11,16 @@
 
 ```javascript
 app.setHandler({
-    'LAUNCH': function() {
+    LAUNCH() {
         this.toIntent('HelloWorldIntent');
     },
 
-    'HelloWorldIntent': function() {
-        this.ask('Hello World! What is your name?', 'Please tell me your name.');
+    HelloWorldIntent() {
+        this.ask('Hello World! What\'s your name?', 'Please tell me your name.');
     },
 
-    'MyNameIsIntent': function(name) {
-        this.tell('Hey ' + name + ', nice to meet you!');
+    MyNameIsIntent() {
+        this.tell('Hey ' + this.$inputs.name.value + ', nice to meet you!');
     },
 });
 ```
@@ -60,43 +60,20 @@ This will clone the Jovo Sample Voice App into a new directory with a name speci
 
 ### Configure your App
 
-You can configure the app and add to its logic in the `app` folder, where you can find a file [`app.js`](./app/app.js), which looks like this:
+You can configure the app and add to its logic in the `src` folder, where you can find a file [`config.js`](./src/config.js), which looks like this:
 
 ```javascript
-'use strict';
+// ------------------------------------------------------------------
+// APP CONFIGURATION
+// ------------------------------------------------------------------
 
-// =================================================================================
-// App Configuration
-// =================================================================================
+module.exports = {
+   logging: true,
 
-const {App} = require('jovo-framework');
-
-const config = {
-    logging: true,
+   intentMap: {
+      'AMAZON.StopIntent': 'END',
+   },
 };
-
-const app = new App(config);
-
-
-// =================================================================================
-// App Logic
-// =================================================================================
-
-app.setHandler({
-    'LAUNCH': function() {
-        this.toIntent('HelloWorldIntent');
-    },
-
-    'HelloWorldIntent': function() {
-        this.ask('Hello World! What is your name?', 'Please tell me your name.');
-    },
-
-    'MyNameIsIntent': function(name) {
-        this.tell('Hey ' + name + ', nice to meet you!');
-    },
-});
-
-module.exports.app = app;
 ```
 
 ### Configure the Language Model
@@ -135,7 +112,7 @@ To find other ways to deploy the language model, please take a look at the tutor
 
 ### Run the Code
 
-The [`index.js`](./index.js) file is responsible for the server configuration.
+The [`index.js`](./index.js) file is responsible for the host configuration.
 
 You can run this template in two ways:
 * Webhook ([docs](https://www.jovo.tech/framework/docs/server/webhook)): Do `$ jovo run` and use a tool like [ngrok](https://www.ngrok.com) to point to the local webhook
@@ -146,25 +123,28 @@ The file looks like this:
 ```javascript
 'use strict';
 
-const {Webhook} = require('jovo-framework');
+const {Webhook, ExpressJS, Lambda} = require('jovo-framework');
 const {app} = require('./app/app.js');
 
-// =================================================================================
-// Server Configuration
-// =================================================================================
+// ------------------------------------------------------------------
+// HOST CONFIGURATION
+// ------------------------------------------------------------------
 
-if (app.isWebhook()) {
+// ExpressJS (Jovo Webhook)
+if (process.argv.indexOf('--webhook') > -1) {
     const port = process.env.PORT || 3000;
+
     Webhook.listen(port, () => {
-        console.log(`Example server listening on port ${port}!`);
+        console.info(`Local server listening on port ${port}.`);
     });
-    Webhook.post('/webhook', (req, res) => {
-        app.handleWebhook(req, res);
+
+    Webhook.post('/webhook', async (req, res) => {
+        await app.handle(new ExpressJS(req, res));
     });
 }
 
-exports.handler = (event, context, callback) => {
-    app.handleLambda(event, context, callback);
+// AWS Lambda
+exports.handler = async (event, context, callback) => {
+    await app.handle(new Lambda(event, context, callback));
 };
-
 ```
